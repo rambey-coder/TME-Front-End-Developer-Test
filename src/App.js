@@ -4,16 +4,17 @@ import axios from 'axios';
 import HomePage from './HomePage';
 
 function App() {
-  const [profile, setProfile] = useState('');
+  const [profile, setProfile] = useState([]);
 
   useEffect(() => {
     axios.get('https://api.terawork.com/service-categories/sellers-services/computer-software-development')
 
-    .then(res => {
-      setProfile(res.data.data.service_search_results)
-      // console.log(res.data);
-    })
+      .then(res => {
+        setProfile(res.data.data.service_search_results.hits)
+        // console.log(res.data.data.service_search_results.hits);
+      })
   }, [])
+  // console.log(profile);
 
   return (
     <div className="App">
@@ -38,13 +39,24 @@ function App() {
           </div>
         </div>
       </div>
-      <HomePage profile={profile}
-        currency={profile.currency_name}
-        avatar={profile.avatar}
-        displayName={profile.display_name}
-        servicePhoto={profile.service_photo}
-        startingFrom={profile.starting_from}
-      />
+      <div className="profile-result">
+        {
+          profile.map((prof, index) => {
+            const results = prof._source;
+            console.log(results)
+            return (
+              <HomePage profile={profile}
+                key={index}
+                currency={results.currency_name}
+                avatar={results.avatar}
+                displayName={results.display_name}
+                servicePhoto={results.service_photo}
+                startingFrom={results.starting_from}
+              />
+            )
+          })
+        }
+      </div>
     </div>
   );
 }
