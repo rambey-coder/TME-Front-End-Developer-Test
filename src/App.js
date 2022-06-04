@@ -1,7 +1,20 @@
 import './App.css';
-// import HomePage from './HomePage';
+import React, { useState, useEffect } from 'react'
+import axios from 'axios';
+import HomePage from './HomePage';
 
 function App() {
+  const [profile, setProfile] = useState('');
+
+  useEffect(() => {
+    axios.get('https://api.terawork.com/service-categories/sellers-services/computer-software-development')
+
+    .then(res => {
+      setProfile(res.data.data.service_search_results)
+      // console.log(res.data);
+    })
+  }, [])
+
   return (
     <div className="App">
       <div className="side-bar">
@@ -12,20 +25,26 @@ function App() {
         <div className="navigation">
           <div className="nav-container active">
             <span>
-              <i class='bx bx-search'></i>
+              <i className='bx bx-search'></i>
               <li>Home</li>
             </span>
           </div>
 
           <div className="nav-container">
             <span>
-              <i class='bx bx-heart' ></i>
+              <i className='bx bx-heart' ></i>
               <li>Favorites</li>
             </span>
           </div>
         </div>
       </div>
-      {/* <HomePage /> */}
+      <HomePage profile={profile}
+        currency={profile.currency_name}
+        avatar={profile.avatar}
+        displayName={profile.display_name}
+        servicePhoto={profile.service_photo}
+        startingFrom={profile.starting_from}
+      />
     </div>
   );
 }
