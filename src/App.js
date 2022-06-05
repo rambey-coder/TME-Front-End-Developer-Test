@@ -1,7 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SideBar from './SideBar';
 import HomePage from './HomePage';
 import Favorite from './Favorite';
 import axios from 'axios';
@@ -15,7 +14,6 @@ function App() {
 
       .then(res => {
         setProfile(res.data.data.service_search_results.hits)
-        // console.log(res.data.data.service_search_results.hits)
       })
   }, [])
 
@@ -23,10 +21,10 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path='/' element={<HomePage profile={profile} setFavorite={setFavorite} favorite={favorite}/>} />
-          <Route path='/favorite' element={<Favorite  favorite={favorite}/>} />
+          <Route path='/' element={<HomePage profile={profile} setFavorite={setFavorite} favorite={favorite} />} />
+          <Route path='/favorite' element={<Favorite favorite={favorite} />} />
         </Routes>
-      </Router> 
+      </Router>
     </div>
   );
 }
