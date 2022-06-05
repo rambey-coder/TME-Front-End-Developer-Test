@@ -14,7 +14,6 @@ function App() {
         console.log(res.data.data.service_search_results.hits);
       })
   }, [])
-  // console.log(profile);
 
   return (
     <div className="App">
