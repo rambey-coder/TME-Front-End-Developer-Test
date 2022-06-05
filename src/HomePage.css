@@ -1,16 +1,17 @@
 .general-result {
-    width: 70%;
+    width: 75%;
+    margin-top: 6rem;
 }
 
 .content-container {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 5rem;
+    margin-top: 4rem;
     gap: 1rem;
 }
 
 .general-profile{
-    width: 32%;
+    width: 23%;
     border-radius: 6px;
     padding: 10px;
     background-color: #fff;

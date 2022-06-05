@@ -1,10 +1,11 @@
 .App {
     display: flex;
+    justify-content: space-between;
     gap: 2rem;
 }
 
 .side-bar {
-    width: 25%;
+    width: 22%;
     border-right: 1px solid #D9DBE9;
 }
 
