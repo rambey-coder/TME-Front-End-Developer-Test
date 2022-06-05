@@ -1,0 +1,59 @@
+.general-result {
+    width: 70%;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    /* justify-content: space-between; */
+    gap: 1rem;
+    /* width: 100%; */
+}
+
+.general-profile{
+    width: 32%;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: gray;
+    /* margin: auto; */
+}
+
+.profile-container {
+    position: relative;
+}
+
+.bg-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+p > span {
+    content: "\20A6";
+}
+
+.profile {
+    width: 100%;
+    padding: 7px;
+    margin-top: 10px;
+}
+
+.display-pic {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 56px;
+}
+
+div > div > div > div > span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

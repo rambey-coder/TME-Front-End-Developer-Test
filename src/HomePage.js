@@ -1,15 +1,19 @@
 import React from 'react'
+import './HomePage.css'
+// style={{ backgroundImage: `url(${servicePhoto})` }}
 
-const HomePage = ({ profile, currency, avatar, displayName, servicePhoto, startingFrom}) => {
-  // console.log(avatar);
+const HomePage = ({ currency, avatar, displayName, servicePhoto, startingFrom }) => {
   return (
-    <div>
-      {/* <h1>Hire Top Developer </h1> */}
+    <div className="general-profile">
       <div className="profile-container">
+      <img src={servicePhoto} alt="background Image" className='bg-img' />
+        <img src={avatar} alt="display pic" className='display-pic' />
         <div className="profile">
-          <img src={avatar} alt="display pic" />
           <h5>{displayName}</h5>
-          <p>{startingFrom}</p>
+          <span>
+            <p><span>&#8358;</span>{startingFrom}</p>
+            <p>Hire</p>
+          </span>
         </div>
       </div>
     </div>

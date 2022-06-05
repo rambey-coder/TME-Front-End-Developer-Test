@@ -11,7 +11,7 @@ function App() {
 
       .then(res => {
         setProfile(res.data.data.service_search_results.hits)
-        // console.log(res.data.data.service_search_results.hits);
+        console.log(res.data.data.service_search_results.hits);
       })
   }, [])
   // console.log(profile);
@@ -39,23 +39,27 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="profile-result">
-        {
-          profile.map((prof, index) => {
-            const results = prof._source;
-            console.log(results)
-            return (
-              <HomePage profile={profile}
-                key={index}
-                currency={results.currency_name}
-                avatar={results.avatar}
-                displayName={results.display_name}
-                servicePhoto={results.service_photo}
-                startingFrom={results.starting_from}
-              />
-            )
-          })
-        }
+
+      <div className="general-result">
+        <h1>Hire Top Developer </h1>
+        <div className="content-container">
+          {
+            profile.map((prof, index) => {
+              const results = prof._source;
+              return (
+                <HomePage
+                  key={index}
+                  currency={results.currency_name}
+                  avatar={results.avatar}
+                  displayName={results.display_name}
+                  servicePhoto={results.service_photo}
+                  startingFrom={results.starting_from}
+                />
+
+              )
+            })
+          }
+        </div>
       </div>
     </div>
   );
