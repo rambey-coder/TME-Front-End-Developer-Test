@@ -52,7 +52,7 @@ p > span {
     bottom: 56px;
 }
 
-div > div > div > div > span {
+.input-details {
     display: flex;
     align-items: center;
     justify-content: space-between;

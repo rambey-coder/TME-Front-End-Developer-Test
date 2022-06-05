@@ -10,7 +10,7 @@ const HomePage = ({ currency, avatar, displayName, servicePhoto, startingFrom })
         <img src={avatar} alt="display pic" className='display-pic' />
         <div className="profile">
           <h5>{displayName}</h5>
-          <span>
+          <span className='input-details'>
             <p><span>&#8358;</span>{startingFrom}</p>
             <p>Hire</p>
           </span>
