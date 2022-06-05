@@ -6,7 +6,8 @@ const HomePage = ({ currency, avatar, displayName, servicePhoto, startingFrom })
   return (
     <div className="general-profile">
       <div className="profile-container">
-      <img src={servicePhoto} alt="background Image" className='bg-img' />
+      <i className='bx bxs-heart fav bx-tada-hover bx-xm '></i>
+      <img src={servicePhoto} alt="background Img" className='bg-img' />
         <img src={avatar} alt="display pic" className='display-pic' />
         <div className="profile">
           <h5>{displayName}</h5>

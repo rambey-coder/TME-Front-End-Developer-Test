@@ -3,6 +3,10 @@
     margin-top: 6rem;
 }
 
+.general-result > h1 {
+    color: #14142B;
+}
+
 .content-container {
     display: flex;
     flex-wrap: wrap;
@@ -15,11 +19,23 @@
     border-radius: 6px;
     padding: 10px;
     background-color: #fff;
-    box-shadow: 1px 1px 8px rgba(241, 241, 241, 0.829);
+    /* box-shadow: 1px 1px 8px rgba(241, 241, 241, 0.829); */
 }
 
 .profile-container {
     position: relative;
+}
+
+.fav {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background: #BBBBBB;
+    color: #fff;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30%;
 }
 
 .bg-img {
