@@ -24,15 +24,15 @@ function App() {
         </div>
 
         <div className="navigation">
-          <div className="nav-container active">
-            <span>
+          <div className="nav-container">
+            <span className='nav-links'>
               <i className='bx bx-search'></i>
               <li>Home</li>
             </span>
           </div>
 
           <div className="nav-container">
-            <span>
+            <span className='nav-links'>
               <i className='bx bx-heart' ></i>
               <li>Favorites</li>
             </span>

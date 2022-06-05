@@ -5,7 +5,6 @@
 
 .side-bar {
     width: 25%;
-    height: 100vh;
     border-right: 1px solid #D9DBE9;
 }
 
@@ -34,7 +33,7 @@
     transition: .4s linear;
 } */
 
-.nav-container > span {
+.nav-container > .nav-links {
     width: 70%;
     margin: auto;
     display: flex;
