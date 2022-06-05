@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 const SideBar = () => {
@@ -10,21 +10,27 @@ const SideBar = () => {
                 </div>
 
                 <div className="navigation">
-                    <div className="nav-container">
                         <span className='nav-links'>
+                            <NavLink to='/' className={({isActive}) => isActive? 'link active' : 'link'}>
+                            <span>
                             <i className='bx bx-search'></i>
-                            <Link to='/' className='link'>Home</Link>
+                            Home
+                            </span>
+                            </NavLink>
                         </span>
-                    </div>
 
-                    <div className="nav-container">
                         <span className='nav-links'>
+                            <NavLink to='/favorite' className={({isActive}) => isActive? 'link active' : 'link'}>
+                            <span>
                             <i className='bx bx-heart' ></i>
-                            <Link to='/favorite' className='link'>Favorites</Link>
+                            Favorites
+                            </span>
+                            
+                            </NavLink>
                         </span>
+
                     </div>
                 </div>
-            </div>
     )
 }
 

@@ -28,34 +28,49 @@
 
 .navigation {
     margin-top: 2rem;
-}
-/* right border */
-/* .nav-container {
-    border-left: 5px solid #1D9BF0;
-    transition: .4s linear;
-} */
-
-.nav-container > .nav-links {
-    width: 70%;
-    margin: auto;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align-items: center; */
     gap: 20px;
 }
+
+
+/* .nav-links {
+    width: 70%;
+    margin: auto;
+    
+} */
 
 .nav-container > span:nth-child(1) {
     margin-bottom: 35px;
 }
 
-.nav-container > span > i {
+/* .nav-container > span > i {
     font-size: 20px;
     text-align: center;
     font-weight: 500;
     color: #0000006E;
+} */
+
+
+
+.link {
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+    font-size: 19px;
+    transition: .4s linear;
+    color: #14142B;
+    border-left: 5px solid transparent;
+}
+
+.active {
+    border-left: 5px solid #1D9BF0;
 }
 
 /* active links */
-/* .nav-container > span > i, .active {
+/* .navigation > span > a > span > i{
     background: #1D9BF0;
     color: #fff;
     padding: 5px;
@@ -64,9 +79,17 @@
     transition: .4s linear;
 }  */
 
-.link {
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 19px;
-    color: #14142B;
+.navigation > span > a > span {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navigation > span > a > span > i {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+    color: #0000006E;
 }

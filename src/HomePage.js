@@ -15,6 +15,9 @@ const HomePage = ({ profile, setFavorite, favorite }) => {
     }
   }
 
+  // const [like, setLike] = useState(false)
+  // const handleFave = () => setLike(!click);
+
   return (
     <div className="app-container">
       <SideBar />
