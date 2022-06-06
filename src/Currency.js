@@ -3,7 +3,7 @@ import './Currency.css'
 const Currency = ({ currencyList }) => {
   return (
     <div className="currency-container">
-     {currencyList}
+      {currencyList}
     </div>
   )
 }

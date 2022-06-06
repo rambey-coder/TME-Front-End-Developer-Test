@@ -24,7 +24,6 @@ const HomePage = ({ profile, setFavorite, favorite }) => {
     axios.get('https://api.terawork.com/resources')
       .then(res => {
         setCurrencies(res.data.data.currencies);
-        // console.log(res.data.data.currencies);
       })
   })
 
@@ -34,10 +33,8 @@ const HomePage = ({ profile, setFavorite, favorite }) => {
   }}>
     {
       currencies.map(currency => {
-        {/* console.log(currency) */ }
         return (
           <>
-            {/* <img src={currency.flag_url}/> */}
             <option value={currency.symbol}>{currency.name}</option>
           </>
 

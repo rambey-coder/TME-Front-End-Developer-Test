@@ -17,7 +17,7 @@ function App() {
         setProfile(res.data.data.service_search_results.hits)
       })
   }, [])
-  
+
 
   return (
     <div className="App">

@@ -31,29 +31,12 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /* align-items: center; */
     gap: 20px;
 }
-
-
-/* .nav-links {
-    width: 70%;
-    margin: auto;
-    
-} */
 
 .nav-container > span:nth-child(1) {
     margin-bottom: 35px;
 }
-
-/* .nav-container > span > i {
-    font-size: 20px;
-    text-align: center;
-    font-weight: 500;
-    color: #0000006E;
-} */
-
-
 
 .link {
     font-weight: 700;
@@ -77,16 +60,6 @@
     border-radius: 5px;
     transition: .4s linear;
 }
-
-/* active links */
-/* .navigation > span > a > span > i{
-    background: #1D9BF0;
-    color: #fff;
-    padding: 5px;
-    font-size: 15px;
-    border-radius: 5px;
-    transition: .4s linear;
-}  */
 
 .navigation > span > a > span {
     width: 70%;
