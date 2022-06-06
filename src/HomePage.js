@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import './HomePage.css';
 import Currency from './Currency';
 import SideBar from './SideBar';
@@ -14,6 +15,33 @@ const HomePage = ({ profile, setFavorite, favorite }) => {
       setFavorite([...favorite, item])
     }
   }
+
+  //currency
+  const [currencies, setCurrencies] = useState([]);
+
+  useEffect(() => {
+    axios.get('https://api.terawork.com/resources')
+      .then(res => {
+        setCurrencies(res.data.data.currencies);
+        // console.log(res.data.data.currencies);
+      })
+  })
+
+//  const symbol = currencies.map(logo => {
+//     return <p>{logo.symbol}</p>
+//   })
+
+  const currencyList = <select name="currency" id="">
+    {
+      currencies.map(currency => {
+        console.log(currency)
+        return (
+          <option>{currency.name}</option>
+        )
+      })
+    }
+  </select>
+
 
   // const [like, setLike] = useState(false)
   // const handleFave = () => setLike(!click);
@@ -45,8 +73,8 @@ const HomePage = ({ profile, setFavorite, favorite }) => {
               )
             })
           }
+          <Currency currencyList={currencyList} />
         </div>
-        <Currency />
       </div>
     </div>
   )

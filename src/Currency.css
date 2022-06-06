@@ -1,0 +1,15 @@
+.currency-container {
+    display: flex;
+    width: 97%;
+    justify-content: flex-end;
+    margin-top: 6rem;
+}
+
+select {
+    outline: 0;
+    padding: 8px;
+    border: 1px solid #8692A6;
+    color: #8692A6;
+    font-size: 13px;
+    border-radius: 6px;
+}

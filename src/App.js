@@ -9,6 +9,7 @@ function App() {
   const [profile, setProfile] = useState([]);
   const [favorite, setFavorite] = useState([])
 
+  //profile
   useEffect(() => {
     axios.get('https://api.terawork.com/service-categories/sellers-services/computer-software-development')
 
@@ -16,6 +17,7 @@ function App() {
         setProfile(res.data.data.service_search_results.hits)
       })
   }, [])
+  
 
   return (
     <div className="App">
