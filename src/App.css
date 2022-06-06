@@ -93,3 +93,15 @@
     font-weight: 500;
     color: #0000006E;
 }
+
+@media screen and (max-width: 760px) {
+    .side-bar {
+        width: 38%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .side-bar {
+        width: 45%;
+    }
+}

@@ -87,3 +87,37 @@ p > span {
     align-items: center;
     justify-content: space-between;
 }
+
+@media screen and (max-width: 968px) {
+    .general-profile {
+        width: 31%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .general-profile {
+        width: 47%;
+    }
+}
+
+@media screen and (max-width: 608px) {
+    .general-profile {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 486px) {
+    .logo > h1 {
+        font-size: 22px;
+    }
+
+    .navigation > span > a > span {
+        font-size: 13px;
+        width: 88%;
+        gap: 5px;
+    }
+
+    .logo {
+        width: 88%;
+    }
+}
