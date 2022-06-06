@@ -65,8 +65,17 @@
     border-left: 5px solid transparent;
 }
 
-.active {
+.active .link{
     border-left: 5px solid #1D9BF0;
+}
+
+.active .home-icon {
+    background: #1D9BF0;
+    color: #fff;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    transition: .4s linear;
 }
 
 /* active links */

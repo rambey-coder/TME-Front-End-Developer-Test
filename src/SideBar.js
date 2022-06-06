@@ -13,7 +13,7 @@ const SideBar = () => {
                         <span className='nav-links'>
                             <NavLink to='/' className={({isActive}) => isActive? 'link active' : 'link'}>
                             <span>
-                            <i className='bx bx-search'></i>
+                            <i className='bx bx-search home-icon'></i>
                             Home
                             </span>
                             </NavLink>
@@ -22,7 +22,7 @@ const SideBar = () => {
                         <span className='nav-links'>
                             <NavLink to='/favorite' className={({isActive}) => isActive? 'link active' : 'link'}>
                             <span>
-                            <i className='bx bx-heart' ></i>
+                            <i className='bx bx-heart home-icon' ></i>
                             Favorites
                             </span>
                             

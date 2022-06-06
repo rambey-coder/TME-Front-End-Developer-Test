@@ -37,6 +37,11 @@
     border-radius: 30%;
 }
 
+.show {
+    background: #fff;
+    color: #FF4135;
+}
+
 .bg-img {
     width: 100%;
     height: 125px;

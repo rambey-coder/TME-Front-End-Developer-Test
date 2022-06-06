@@ -18,6 +18,7 @@ const HomePage = ({ profile, setFavorite, favorite }) => {
 
   //currency
   const [currencies, setCurrencies] = useState([]);
+  const [value, setValue] = useState(<span>&#8358;</span>)
 
   useEffect(() => {
     axios.get('https://api.terawork.com/resources')
@@ -27,24 +28,23 @@ const HomePage = ({ profile, setFavorite, favorite }) => {
       })
   })
 
-//  const symbol = currencies.map(logo => {
-//     return <p>{logo.symbol}</p>
-//   })
-
-  const currencyList = <select name="currency" id="">
+  const currencyList = <select name="currency" id="" onChange={(e) => {
+    const selectedval = e.target.value
+    setValue(selectedval)
+  }}>
     {
       currencies.map(currency => {
-        console.log(currency)
+        {/* console.log(currency) */ }
         return (
-          <option>{currency.name}</option>
+          <>
+            {/* <img src={currency.flag_url}/> */}
+            <option value={currency.symbol}>{currency.name}</option>
+          </>
+
         )
       })
     }
   </select>
-
-
-  // const [like, setLike] = useState(false)
-  // const handleFave = () => setLike(!click);
 
   return (
     <div className="app-container">
@@ -58,13 +58,15 @@ const HomePage = ({ profile, setFavorite, favorite }) => {
               return (
                 <div className="general-profile" key={index}>
                   <div className="profile-container">
-                    <i className='bx bxs-heart fav bx-tada-hover bx-xm ' onClick={() => { handleFav(prof) }}></i>
+                    <i className={favorite.filter((item) =>
+                      item._id === prof._id
+                    ).length > 0 ? 'bx bxs-heart fav bx-tada-hover bx-xm show' : 'bx bxs-heart fav bx-tada-hover bx-xm'} onClick={() => { handleFav(prof) }}></i>
                     <img src={results.service_photo} alt="background Img" className='bg-img' />
                     <img src={results.avatar} alt="display pic" className='display-pic' />
                     <div className="profile">
                       <h5>{results.display_name}</h5>
                       <span className='input-details'>
-                        <p><span>&#8358;</span>{results.starting_from}</p>
+                        <p>{value}{results.starting_from}</p>
                         <p>Hire</p>
                       </span>
                     </div>

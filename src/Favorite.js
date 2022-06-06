@@ -14,7 +14,7 @@ const Favorite = ({ favorite }) => {
               return (
                 <div className="general-profile" key={index}>
                   <div className="profile-container">
-                    <i className='bx bxs-heart fav bx-tada-hover bx-xm '></i>
+                    <i className='bx bxs-heart fav bx-tada-hover bx-xm show'></i>
                     <img src={val.service_photo} alt="background Img" className='bg-img' />
                     <img src={val.avatar} alt="display pic" className='display-pic' />
                     <div className="profile">
